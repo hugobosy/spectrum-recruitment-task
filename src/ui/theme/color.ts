@@ -15,5 +15,4 @@ export const color = {
 
   primary: '#071594',
   danger: '#FF0000',
-  shadow: 'rgba(0, 0, 0, 0.75)',
 };
