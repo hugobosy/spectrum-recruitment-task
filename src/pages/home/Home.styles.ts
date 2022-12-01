@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -53,7 +52,14 @@ const Name = styled.div`
   width: 333px;
 `;
 
-const Properties = styled.div `
-  width: 333px;
+const Icons = styled.div `
+  display: flex;
+  column-gap: 1.444rem;
+  position: absolute;
+  right: -80px;
 `
-export default { Wrapper, Container, Header, Content, Name, Properties };
+
+const Properties = styled.div`
+  width: 333px;
+`;
+export default { Wrapper, Container, Header, Content, Name, Properties, Icons };

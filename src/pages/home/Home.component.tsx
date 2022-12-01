@@ -22,8 +22,10 @@ export const Home = () => {
           <img src="https://picsum.photos/534/383" alt="Portrait" />
           <S.Name>
             <Paragraph weight={800} size="large" font="inter" text="Name" />
-            <UserIcon />
-            <AcceptIcon />
+            <S.Icons>
+              <UserIcon />
+              <AcceptIcon />
+            </S.Icons>
           </S.Name>
           <S.Properties>
             <Paragraph weight={100} size="small" font="inter" text="age:" />
