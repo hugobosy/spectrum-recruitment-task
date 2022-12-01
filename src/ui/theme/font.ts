@@ -1,7 +1,10 @@
 export const font = {
   size: {
+    xs: "1.5rem",
     s: "2rem",
+    sm: "2.5rem",
     m: "3rem",
+    ml: "4rem",
     l: "5rem",
   },
 

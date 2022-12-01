@@ -17,12 +17,12 @@ const bgColors = {
 
 const Button = styled.button<Partial<ButtonTypes>>`
   padding: 1rem 3.1rem;
-  max-width: 236px;
+  width: 236px;
   border: none;
-  text-align: left;
+  text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: ${({ theme }) => theme.font.family.secondary};
-  font-size: ${({ theme }) => theme.font.size.m};
+  font-size: ${({ theme }) => theme.font.size.xs};
   color: ${({ theme }) => theme.color.light};
   border-radius: ${({theme}) => theme.radius.normal};
   line-height: ${({theme}) => theme.font.line.s};
@@ -30,7 +30,12 @@ const Button = styled.button<Partial<ButtonTypes>>`
   ${({ bgColor }) => bgColor && bgColors[bgColor]};
   font-style: italic;
   cursor: pointer;
-  box-shadow: ${({theme}) => theme.shadow["box-shadow"]}
+  box-shadow: ${({theme}) => theme.shadow["box-shadow"]};
+  
+  ${({theme}) => theme.media.md} {
+    text-align: left;
+    font-size: ${({ theme }) => theme.font.size.m};
+  }
 `;
 
 export default { Button };

@@ -13,15 +13,27 @@ const fonts = {
 
 const sizes = {
   small: css`
-    font-size: ${({ theme }) => theme.font.size.s};
+    font-size: ${({ theme }) => theme.font.size.xs};
+    
+    ${({theme}) => theme.media.md} {
+      font-size: ${({ theme }) => theme.font.size.s};
+    }
   `,
 
   medium: css`
-    font-size: ${({ theme }) => theme.font.size.m};
+    font-size: ${({ theme }) => theme.font.size.s};
+
+    ${({theme}) => theme.media.md} {
+      font-size: ${({ theme }) => theme.font.size.m};
+    }
   `,
 
   large: css`
-    font-size: ${({ theme }) => theme.font.size.l};
+    font-size: ${({ theme }) => theme.font.size.s};
+
+    ${({theme}) => theme.media.md} {
+      font-size: ${({ theme }) => theme.font.size.l};
+    }
   `,
 };
 

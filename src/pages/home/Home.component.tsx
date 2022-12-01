@@ -22,9 +22,8 @@ export const Home = () => {
   }, [number]);
 
   const nextData = () => {
-    setNumber(number + 1)
-    console.log('dziala')
-  }
+    setNumber(number + 1);
+  };
 
   return (
     <S.Wrapper>
@@ -36,7 +35,11 @@ export const Home = () => {
             font="lato"
             text="Hubert Kliszcz"
           />
-          <Button text="formularz rejestracyjny" bgColor="darkGreen" handleClick={()=>{}}/>
+          <Button
+            text="formularz rejestracyjny"
+            bgColor="darkGreen"
+            handleClick={() => {}}
+          />
         </S.Header>
         {data.map(({ name, birth_year, eye_color }) => (
           <S.Content>
