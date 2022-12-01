@@ -1,14 +1,23 @@
 import React from "react";
-import S from './Home.styles';
-import {Paragraph} from "../../ui/components/paragraph/Paragraph";
+import S from "./Home.styles";
+import { Paragraph } from "../../ui/components/paragraph/Paragraph";
+import { Button } from "../../ui/components/button/Button";
 
 export const Home = () => {
-
-    return (
-        <S.Wrapper>
-            <S.Container>
-                <Paragraph weight={800} size="large" font="inter" text="name" />
-            </S.Container>
-        </S.Wrapper>
-    )
-}
+  return (
+    <S.Wrapper>
+      <S.Container>
+        <S.Header>
+          <Paragraph
+            weight={400}
+            size="medium"
+            font="lato"
+            text="Hubert Kliszcz"
+          />
+          <Button text="formularz rejestracyjny" bgColor="darkGreen" />
+        </S.Header>
+        <S.Content></S.Content>
+      </S.Container>
+    </S.Wrapper>
+  );
+};
