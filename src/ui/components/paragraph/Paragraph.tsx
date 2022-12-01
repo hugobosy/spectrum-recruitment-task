@@ -7,8 +7,9 @@ export const Paragraph: React.FC<ParagraphTypes> = ({
   size,
   font,
   text,
+  isItalic,
 }) => (
-  <S.Paragraph weight={weight} size={size} font={font}>
+  <S.Paragraph weight={weight} size={size} font={font} isItalic={isItalic}>
     {text}
   </S.Paragraph>
 );

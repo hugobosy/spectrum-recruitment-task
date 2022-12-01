@@ -4,6 +4,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 100%;
   background-color: ${({ theme }) => theme.color.gray.light};
 `;
 
@@ -12,7 +13,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 1130px;
-  height: 100vh;
   padding: 11px 26px;
   background-color: ${({ theme }) => theme.color.light};
 `;
@@ -20,7 +20,7 @@ const Container = styled.div`
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  min-width: 100%;
 `;
 
 const Content = styled.div`
@@ -28,7 +28,7 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 800px;
+  min-width: 800px;
   height: 73.983rem;
   margin-top: 87px;
   margin-bottom: 30px;

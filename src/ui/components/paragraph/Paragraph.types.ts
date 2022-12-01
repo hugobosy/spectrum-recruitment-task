@@ -7,4 +7,5 @@ export interface ParagraphTypes {
   size: Size;
   font: Font;
   text: string;
+  isItalic?: boolean;
 }

@@ -43,6 +43,7 @@ const Paragraph = styled.p<Partial<ParagraphTypes>>`
   ${({font}) => font && fonts[font]};
   ${({size}) => size && sizes[size]};
   ${({weight}) => weight && weights[weight]};
+  ${({isItalic}) => isItalic && css`font-style: italic`};
 `;
 
 export default { Paragraph };

@@ -28,12 +28,19 @@ export const Home = () => {
             </S.Icons>
           </S.Name>
           <S.Properties>
-            <Paragraph weight={100} size="small" font="inter" text="age:" />
+            <Paragraph
+              weight={100}
+              size="small"
+              font="inter"
+              text="age:"
+              isItalic
+            />
             <Paragraph
               weight={100}
               size="small"
               font="inter"
               text="eye color:"
+              isItalic
             />
           </S.Properties>
         </S.Content>
