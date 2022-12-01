@@ -1,13 +1,11 @@
 import React from "react";
-import { Button } from "./ui/components/button/Button";
+import { Home } from "./pages/home/Home.component";
 
 function App() {
   return (
-      <>
-        <Button text="formularz rejestracyjny" bgColor="darkGreen" />
-        <Button text="next profiles" bgColor="green" />
-        <Button text="zapisz" bgColor="blue" />
-      </>
+    <>
+      <Home />
+    </>
   );
 }
 

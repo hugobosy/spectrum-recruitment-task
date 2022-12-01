@@ -1,0 +1,1 @@
+export type Weight = 100 | 400 | 800
