@@ -19,9 +19,12 @@ export const Home = () => {
     fetch(`https://swapi.dev/api/people/${number}/`)
       .then((res) => res.json())
       .then((data) => setData([data]));
-  }, []);
+  }, [number]);
 
-  console.log(data);
+  const nextData = () => {
+    setNumber(number + 1)
+    console.log('dziala')
+  }
 
   return (
     <S.Wrapper>
@@ -33,7 +36,7 @@ export const Home = () => {
             font="lato"
             text="Hubert Kliszcz"
           />
-          <Button text="formularz rejestracyjny" bgColor="darkGreen" />
+          <Button text="formularz rejestracyjny" bgColor="darkGreen" handleClick={()=>{}}/>
         </S.Header>
         {data.map(({ name, birth_year, eye_color }) => (
           <S.Content>
@@ -63,7 +66,7 @@ export const Home = () => {
             </S.Properties>
           </S.Content>
         ))}
-        <Button text="next profiles" bgColor="green" />
+        <Button text="next profiles" bgColor="green" handleClick={nextData} />
       </S.Container>
     </S.Wrapper>
   );

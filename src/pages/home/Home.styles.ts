@@ -45,18 +45,16 @@ const Content = styled.div`
 
 const Name = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: relative;
   padding: 2.639rem 0;
-  width: 333px;
+  width: 600px;
 `;
 
 const Icons = styled.div `
   display: flex;
   column-gap: 1.444rem;
-  position: absolute;
-  right: -80px;
 `
 
 const Properties = styled.div`
