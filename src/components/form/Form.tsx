@@ -16,75 +16,54 @@ export const Form = () => {
 
   return (
     <form>
-      <div>
-        <label>Login:</label>
-        <p>
-          <input
-            type="text"
-            value={registerData.login}
-            onChange={(e) =>
-              setRegisterData({ ...registerData, login: e.target.value })
-            }
-          />
-        </p>
-      </div>
-      <div>
-        <label>Hasło:</label>
-        <p>
-          <input
-            type="password"
-            value={registerData.password}
-            onChange={(e) =>
-              setRegisterData({ ...registerData, password: e.target.value })
-            }
-          />
-        </p>
-      </div>
-      <div>
-        <label>E-mail:</label>
-        <p>
-          <input
-            type="email"
-            value={registerData.email}
-            onChange={(e) =>
-              setRegisterData({ ...registerData, email: e.target.value })
-            }
-          />
-        </p>
-      </div>
-      <div>
-        <label>Numer telefonu:</label>
-        <p>
-          <input
-            type="text"
-            value={registerData.phone}
-            onChange={(e) =>
-              setRegisterData({
-                ...registerData,
-                phone: e.target.value,
-              })
-            }
-          />
-        </p>
-      </div>
-      <div>
-        <input
-          type="checkbox"
-          checked={registerData.checked}
-          onChange={(e) =>
-            setRegisterData({ ...registerData, checked: e.target.checked })
-          }
-        />
-        <label>Akceptuję regulamin</label>
-      </div>
       <Input
         type="text"
-        text="Proba"
+        text="Login"
+        value={registerData.login}
+        change={(e) =>
+          setRegisterData({ ...registerData, login: e.target.value })
+        }
+        id="login"
+      />
+
+      <Input
+        type="password"
+        text="Hasło"
+        value={registerData.password}
+        change={(e) =>
+          setRegisterData({ ...registerData, password: e.target.value })
+        }
+        id="password"
+      />
+
+      <Input
+        type="email"
+        text="E-mail"
         value={registerData.email}
         change={(e) =>
           setRegisterData({ ...registerData, email: e.target.value })
         }
         id="proba"
+      />
+
+      <Input
+        type="text"
+        text="Numer telefonu"
+        value={registerData.phone}
+        change={(e) =>
+          setRegisterData({ ...registerData, phone: e.target.value })
+        }
+        id="phone"
+      />
+
+      <Input
+        type="checkbox"
+        text="Akceptuję regulamin"
+        checked={registerData.checked}
+        change={(e) =>
+          setRegisterData({ ...registerData, checked: e.target.checked })
+        }
+        id="check"
       />
       <Button text="zapisz" handleClick={() => {}} bgColor="blue" />
     </form>
