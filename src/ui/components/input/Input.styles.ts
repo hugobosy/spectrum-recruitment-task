@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   input {
     width: 100%;
     border: 0 solid black;
-    border-bottom: 2px solid black;
+    border-bottom: .155rem solid black;
     padding: 10px 0;
     font-size: ${({ theme }) => theme.font.size.xs};
 

@@ -12,4 +12,6 @@ export interface ParagraphTypes {
   isUppercase?: boolean;
   letterSpacing?: number;
   align?: Align;
+  isUnderline?: boolean;
+  lineHeight?: number;
 }

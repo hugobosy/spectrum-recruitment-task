@@ -64,25 +64,45 @@ const aligns = {
 };
 
 const Paragraph = styled.p<Partial<ParagraphTypes>>`
-  ${({font}) => font && fonts[font]};
-  ${({size}) => size && sizes[size]};
-  ${({weight}) => weight && weights[weight]};
-  ${({align}) => align && aligns[align]};
-  ${({isItalic}) =>
-      isItalic &&
-      css`
-        font-style: italic;
-      `};
-  ${({isUppercase}) =>
-      isUppercase &&
-      css`
-        text-transform: uppercase;
-      `};
-  ${({letterSpacing}) =>
-      letterSpacing &&
-      css`
-        letter-spacing: ${letterSpacing}em;
-      `};
+  position: relative;
+  ${({ font }) => font && fonts[font]};
+  ${({ size }) => size && sizes[size]};
+  ${({ weight }) => weight && weights[weight]};
+  ${({ align }) => align && aligns[align]};
+  ${({ isItalic }) =>
+    isItalic &&
+    css`
+      font-style: italic;
+    `};
+  ${({ isUppercase }) =>
+    isUppercase &&
+    css`
+      text-transform: uppercase;
+    `};
+  ${({ letterSpacing }) =>
+    letterSpacing &&
+    css`
+      letter-spacing: ${letterSpacing}em;
+    `};
+  ${({ isUnderline }) =>
+    isUnderline &&
+    css`
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2.239rem;
+        left: calc(100% - 16.617rem);
+        width: 16.617rem;
+        height: 0.929rem;
+        background-color: ${({ theme }) => theme.color.primary};
+      }
+    `};
+
+  ${({ lineHeight }) =>
+    lineHeight &&
+    css`
+      line-height: ${lineHeight}px;
+    `};
 `;
 
 export default { Paragraph };

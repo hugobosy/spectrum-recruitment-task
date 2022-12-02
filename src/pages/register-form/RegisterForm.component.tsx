@@ -16,6 +16,8 @@ export const RegisterForm = () => {
           isUppercase
           letterSpacing={0.15}
           align="right"
+          isUnderline
+          lineHeight={33}
         />
         <Form />
       </Container>

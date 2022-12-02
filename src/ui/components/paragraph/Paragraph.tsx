@@ -11,6 +11,8 @@ export const Paragraph: React.FC<ParagraphTypes> = ({
   isUppercase,
   letterSpacing,
   align,
+  isUnderline,
+  lineHeight,
 }) => (
   <S.Paragraph
     weight={weight}
@@ -20,6 +22,8 @@ export const Paragraph: React.FC<ParagraphTypes> = ({
     isUppercase={isUppercase}
     letterSpacing={letterSpacing}
     align={align}
+    isUnderline={isUnderline}
+    lineHeight={lineHeight}
   >
     {text}
   </S.Paragraph>
