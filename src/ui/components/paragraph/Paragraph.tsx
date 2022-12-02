@@ -8,8 +8,19 @@ export const Paragraph: React.FC<ParagraphTypes> = ({
   font,
   text,
   isItalic,
+  isUppercase,
+  letterSpacing,
+  align,
 }) => (
-  <S.Paragraph weight={weight} size={size} font={font} isItalic={isItalic}>
+  <S.Paragraph
+    weight={weight}
+    size={size}
+    font={font}
+    isItalic={isItalic}
+    isUppercase={isUppercase}
+    letterSpacing={letterSpacing}
+    align={align}
+  >
     {text}
   </S.Paragraph>
 );

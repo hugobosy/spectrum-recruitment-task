@@ -66,7 +66,9 @@ export const Form = () => {
         }
         id="check"
       />
-      <Button text="zapisz" handleClick={() => {}} bgColor="blue" />
+      <div>
+          <Button text="zapisz" handleClick={() => {}} bgColor="blue" />
+      </div>
     </S.Form>
   );
 };
