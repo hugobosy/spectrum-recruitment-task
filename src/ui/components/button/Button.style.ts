@@ -15,11 +15,23 @@ const bgColors = {
   `,
 };
 
+const aligns = {
+  left: css`
+    text-align: left;
+  `,
+  center: css`
+    text-align: center;
+  `,
+  right: css`
+    text-align: right;
+  `,
+};
+
 const Button = styled.button<Partial<ButtonTypes>>`
   padding: 1rem 3.1rem;
   width: 236px;
   border: none;
-  text-align: center;
+  ${({align}) => align && aligns[align]};
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: ${({ theme }) => theme.font.family.secondary};
   font-size: ${({ theme }) => theme.font.size.xs};
@@ -33,7 +45,6 @@ const Button = styled.button<Partial<ButtonTypes>>`
   box-shadow: ${({theme}) => theme.shadow["box-shadow"]};
   
   ${({theme}) => theme.media.md} {
-    text-align: left;
     font-size: ${({ theme }) => theme.font.size.m};
   }
 `;

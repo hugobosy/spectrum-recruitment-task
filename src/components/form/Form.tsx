@@ -87,9 +87,9 @@ export const Form = () => {
           setRegisterData({ ...registerData, checked: e.target.checked })
         }
       />
-      <div>
-        <Button text="zapisz" handleClick={() => {}} bgColor="blue" />
-      </div>
+      <S.Confirm>
+        <Button text="zapisz" handleClick={() => {}} bgColor="blue" align="center"/>
+      </S.Confirm>
     </S.Form>
   );
 };

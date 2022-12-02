@@ -10,4 +10,11 @@ const Form = styled.form`
   }
 `;
 
-export default { Form };
+const Confirm = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0;
+`
+
+export default { Form, Confirm };
