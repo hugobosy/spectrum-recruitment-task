@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-color: ${({ theme }) => theme.color.gray.light};
-`;
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -75,4 +67,4 @@ const Properties = styled.div`
   width: 333px;
   margin: 0 auto;
 `;
-export default { Wrapper, Container, Header, Content, Name, Properties, Icons };
+export default { Container, Header, Content, Name, Properties, Icons };

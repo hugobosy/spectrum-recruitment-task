@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Paragraph } from "../../ui/components/paragraph/Paragraph";
 import { Button } from "../../ui/components/button/Button";
+import { AcceptIcon } from "../../ui/components/accept-icon/AcceptIcon";
+import { UserIcon } from "../../ui/components/user-icon/UserIcon";
+import { Wrapper } from "../../ui/components/wrapper/Wrapper";
 import S from "./Home.styles";
-import { AcceptIcon } from "../../ui/accept-icon/AcceptIcon";
-import { UserIcon } from "../../ui/user-icon/UserIcon";
 
 interface data {
   name: string;
@@ -26,7 +27,7 @@ export const Home = () => {
   };
 
   return (
-    <S.Wrapper>
+    <Wrapper>
       <S.Container>
         <S.Header>
           <Paragraph
@@ -42,7 +43,7 @@ export const Home = () => {
           />
         </S.Header>
         {data.map(({ name, birth_year, eye_color }) => (
-          <S.Content>
+          <S.Content key={name}>
             <img src="https://picsum.photos/534/383" alt="Portrait" />
             <S.Name>
               <Paragraph weight={800} size="large" font="inter" text={name} />
@@ -71,6 +72,6 @@ export const Home = () => {
         ))}
         <Button text="next profiles" bgColor="green" handleClick={nextData} />
       </S.Container>
-    </S.Wrapper>
+    </Wrapper>
   );
 };
