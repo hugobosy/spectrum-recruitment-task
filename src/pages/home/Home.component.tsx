@@ -18,7 +18,7 @@ export const Home = () => {
   const [number, setNumber] = useState(1);
 
   useEffect(() => {
-    fetch(`https://swapi.dev/api/people/${number}/`)
+    fetch(`https://swapi.py4e.com/api/people/${number}/`)
       .then((res) => res.json())
       .then((data) => setData([data]));
   }, [number]);
