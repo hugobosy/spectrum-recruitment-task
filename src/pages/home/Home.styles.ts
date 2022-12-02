@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1130px;
-  padding: 11px 26px;
-  background-color: ${({ theme }) => theme.color.light};
-`;
-
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
@@ -67,4 +57,4 @@ const Properties = styled.div`
   width: 333px;
   margin: 0 auto;
 `;
-export default { Container, Header, Content, Name, Properties, Icons };
+export default { Header, Content, Name, Properties, Icons };

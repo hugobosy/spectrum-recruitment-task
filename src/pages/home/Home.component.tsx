@@ -4,6 +4,7 @@ import { Button } from "../../ui/components/button/Button";
 import { AcceptIcon } from "../../ui/components/accept-icon/AcceptIcon";
 import { UserIcon } from "../../ui/components/user-icon/UserIcon";
 import { Wrapper } from "../../ui/components/wrapper/Wrapper";
+import { Container } from "../../ui/components/container/Container";
 import S from "./Home.styles";
 
 interface data {
@@ -28,7 +29,7 @@ export const Home = () => {
 
   return (
     <Wrapper>
-      <S.Container>
+      <Container>
         <S.Header>
           <Paragraph
             weight={400}
@@ -71,7 +72,7 @@ export const Home = () => {
           </S.Content>
         ))}
         <Button text="next profiles" bgColor="green" handleClick={nextData} />
-      </S.Container>
+      </Container>
     </Wrapper>
   );
 };
