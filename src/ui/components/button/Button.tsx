@@ -7,9 +7,10 @@ export const Button: React.FC<ButtonTypes> = ({
   bgColor,
   handleClick,
   align,
+  type,
 }) => {
   return (
-    <S.Button bgColor={bgColor} onClick={handleClick} align={align}>
+    <S.Button bgColor={bgColor} onClick={handleClick} align={align} type={type}>
       {text}
     </S.Button>
   );

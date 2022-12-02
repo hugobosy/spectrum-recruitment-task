@@ -32,4 +32,12 @@ const Label = styled.label`
   }
 `;
 
-export default { Wrapper, Label };
+const Error = styled.span `
+  text-align: right;
+  font-size: ${({theme}) => theme.font.size.xs};
+  line-height: ${({theme}) => theme.font.line.l};
+  font-family: ${({theme}) => theme.font.family.primary};
+  font-style: italic;
+  color: ${({theme}) => theme.color.danger};
+`
+export default { Wrapper, Label, Error };
