@@ -6,10 +6,12 @@ const Container = styled.div<Partial<ContainerTypes>>`
   flex-direction: column;
   width: 100%;
   max-width: 1130px;
-  height: 100%;
-  padding: 11px 26px;
+  height: 100vh;
   background-color: ${({ theme }) => theme.color.light};
-  ${({paddingTop}) => paddingTop && css`padding-top: ${paddingTop}px`};
+  ${({paddingTop}) => paddingTop && css`
+    ${({theme}) => theme.media.md} {
+      padding-top: ${paddingTop}px;
+    }`};
   ${({paddingLeft}) => paddingLeft && css`padding-left: ${paddingLeft}px`};
   ${({paddingRight}) => paddingRight && css`padding-right: ${paddingRight}px`};
   ${({paddingBottom}) => paddingBottom && css`padding-bottom: ${paddingBottom}px`};

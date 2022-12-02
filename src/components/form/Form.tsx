@@ -3,7 +3,9 @@ import { Button } from "../../ui/components/button/Button";
 import { RegisterData } from "../../pages/register-form/RegisterForm.types";
 import { v4 as uuid } from "uuid";
 import { Input } from "../../ui/components/input/Input";
-import S from './Form.styles';
+import S from "./Form.styles";
+import { Paragraph } from "../../ui/components/paragraph/Paragraph";
+import { Checkbox } from "../../ui/components/checkbox/Checkbox";
 
 export const Form = () => {
   const [registerData, setRegisterData] = useState<RegisterData>({
@@ -17,6 +19,17 @@ export const Form = () => {
 
   return (
     <S.Form>
+      <Paragraph
+        weight={800}
+        size="small"
+        font="inter"
+        text="formularz rejestracyjny"
+        isUppercase
+        letterSpacing={0.15}
+        align="right"
+        isUnderline
+        lineHeight={33}
+      />
       <Input
         type="text"
         text="Login"
@@ -57,17 +70,25 @@ export const Form = () => {
         id="phone"
       />
 
-      <Input
-        type="checkbox"
-        text="Akceptuję regulamin"
+      {/*<Input*/}
+      {/*  type="checkbox"*/}
+      {/*  text="Akceptuję regulamin"*/}
+      {/*  checked={registerData.checked}*/}
+      {/*  change={(e) =>*/}
+      {/*    setRegisterData({ ...registerData, checked: e.target.checked })*/}
+      {/*  }*/}
+      {/*  id="check"*/}
+      {/*/>*/}
+
+      <Checkbox
         checked={registerData.checked}
+        id="check"
         change={(e) =>
           setRegisterData({ ...registerData, checked: e.target.checked })
         }
-        id="check"
       />
       <div>
-          <Button text="zapisz" handleClick={() => {}} bgColor="blue" />
+        <Button text="zapisz" handleClick={() => {}} bgColor="blue" />
       </div>
     </S.Form>
   );

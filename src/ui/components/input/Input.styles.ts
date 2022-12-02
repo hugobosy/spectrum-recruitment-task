@@ -6,7 +6,6 @@ const Wrapper = styled.div`
   padding: 20px 0;
 
   input {
-    width: 100%;
     border: 0 solid black;
     border-bottom: .155rem solid black;
     padding: 10px 0;
