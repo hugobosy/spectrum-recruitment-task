@@ -7,6 +7,10 @@ const Form = styled.form`
 
   ${({theme}) => theme.media.md} {
     padding: 0px 174px;
+    
+    div:nth-child(1) {
+      margin-bottom: 55px;
+    }
   }
 `;
 

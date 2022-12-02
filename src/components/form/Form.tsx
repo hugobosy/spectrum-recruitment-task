@@ -38,7 +38,7 @@ export const Form = () => {
   };
 
   const handleForm = async (e: SyntheticEvent) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (
       errors.login &&
       errors.password &&
@@ -47,31 +47,26 @@ export const Form = () => {
       errors.checked
     ) {
       await handleSend();
-      setRegisterData({
-        id: "",
-        login: "",
-        password: "",
-        email: "",
-        phone: "",
-        checked: false,
-      });
+
     }
-    console.log(registerData)
+    console.log(registerData);
   };
 
   return (
     <S.Form onSubmit={handleForm}>
-      <Paragraph
-        weight={800}
-        size="small"
-        font="inter"
-        text="formularz rejestracyjny"
-        isUppercase
-        letterSpacing={0.15}
-        align="right"
-        isUnderline
-        lineHeight={33}
-      />
+      <div>
+        <Paragraph
+          weight={800}
+          size="small"
+          font="inter"
+          text="formularz rejestracyjny"
+          isUppercase
+          letterSpacing={0.15}
+          align="right"
+          isUnderline
+          lineHeight={33}
+        />
+      </div>
       <Input
         type="text"
         text="Login"
@@ -131,8 +126,9 @@ export const Form = () => {
         }
         id="phone"
         error={
-          /^[0-9]+$/.test(registerData.phone) &&
-          registerData.phone.length === 9 || registerData.phone.length === 0
+          (/^[0-9]+$/.test(registerData.phone) &&
+            registerData.phone.length === 9) ||
+          registerData.phone.length === 0
             ? ""
             : "Nieprawidłowy numer telefonu"
         }
@@ -145,6 +141,7 @@ export const Form = () => {
         change={(e) =>
           setRegisterData({ ...registerData, checked: e.target.checked })
         }
+        error={registerData.checked}
       />
       <S.Confirm>
         <Button text="zapisz" type="submit" bgColor="blue" align="center" />

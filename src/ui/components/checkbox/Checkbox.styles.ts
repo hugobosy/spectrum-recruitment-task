@@ -4,6 +4,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   column-gap: 21px;
+  margin-top: 38px;
 
   input {
     width: 30px;
@@ -41,6 +42,7 @@ const Wrapper = styled.div`
   }
 
   label {
+    width: 100%;
     line-height: ${({theme}) => theme.font.line.l};
     font-family: ${({theme}) => theme.font.family.primary};
     font-size: ${({theme}) => theme.font.size.xs};
@@ -49,6 +51,12 @@ const Wrapper = styled.div`
     ${({theme}) => theme.media.md} {
       font-size: ${({theme}) => theme.font.size.s};
     }
+  }
+  
+  span {
+    position: absolute;
+    display: block;
+    color: ${({theme}) => theme.color.danger};
   }
 `;
 
