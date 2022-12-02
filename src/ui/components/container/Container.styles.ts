@@ -6,6 +6,7 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1130px;
+  height: 100%;
   padding: 11px 26px;
   background-color: ${({ theme }) => theme.color.light};
 `;

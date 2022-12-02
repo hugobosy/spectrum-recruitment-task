@@ -3,6 +3,7 @@ import { Button } from "../../ui/components/button/Button";
 import { RegisterData } from "../../pages/register-form/RegisterForm.types";
 import { v4 as uuid } from "uuid";
 import { Input } from "../../ui/components/input/Input";
+import S from './Form.styles';
 
 export const Form = () => {
   const [registerData, setRegisterData] = useState<RegisterData>({
@@ -15,7 +16,7 @@ export const Form = () => {
   });
 
   return (
-    <form>
+    <S.Form>
       <Input
         type="text"
         text="Login"
@@ -66,6 +67,6 @@ export const Form = () => {
         id="check"
       />
       <Button text="zapisz" handleClick={() => {}} bgColor="blue" />
-    </form>
+    </S.Form>
   );
 };

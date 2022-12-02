@@ -5,6 +5,7 @@ import {RegisterForm} from "./pages/register-form/RegisterForm.component";
 function App() {
   return (
     <>
+        {/*<Home/>*/}
       <RegisterForm />
     </>
   );
