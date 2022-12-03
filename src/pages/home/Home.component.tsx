@@ -6,6 +6,7 @@ import { UserIcon } from "../../ui/components/user-icon/UserIcon";
 import { Wrapper } from "../../ui/components/wrapper/Wrapper";
 import { Container } from "../../ui/components/container/Container";
 import S from "./Home.styles";
+import { NavLink } from "react-router-dom";
 
 interface data {
   name: string;
@@ -37,11 +38,13 @@ export const Home = () => {
             font="lato"
             text="Hubert Kliszcz"
           />
-          <Button
-            text="formularz rejestracyjny"
-            bgColor="darkGreen"
-            handleClick={() => {}}
-          />
+          <NavLink to="/register">
+            <Button
+              text="formularz rejestracyjny"
+              bgColor="darkGreen"
+              handleClick={() => {}}
+            />
+          </NavLink>
         </S.Header>
         {data.map(({ name, birth_year, eye_color }) => (
           <S.Content key={name}>
