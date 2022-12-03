@@ -4,16 +4,10 @@ import S from "./Container.styles";
 
 export const Container: React.FC<ContainerTypes> = ({
   children,
-  paddingTop,
-  paddingLeft,
-  paddingRight,
-  paddingBottom,
+  page
 }) => (
   <S.Container
-    paddingTop={paddingTop}
-    paddingLeft={paddingLeft}
-    paddingBottom={paddingBottom}
-    paddingRight={paddingRight}
+   page={page}
   >
     {children}
   </S.Container>

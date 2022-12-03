@@ -1,9 +1,7 @@
-import {ReactNode} from "react";
+import { ReactNode } from "react";
+import { Page } from "../../../types/page";
 
 export interface ContainerTypes {
   children: ReactNode;
-  paddingTop?: number;
-  paddingBottom?: number;
-  paddingLeft?: number;
-  paddingRight?: number;
+  page: Page;
 }

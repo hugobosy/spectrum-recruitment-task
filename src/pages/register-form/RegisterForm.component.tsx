@@ -6,7 +6,7 @@ import { Form } from "../../components/form/Form";
 export const RegisterForm = () => {
   return (
     <Wrapper>
-      <Container>
+      <Container page="regForm">
         <Form />
       </Container>
     </Wrapper>

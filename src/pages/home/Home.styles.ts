@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 `;
 
@@ -13,21 +14,25 @@ const Content = styled.div`
   align-items: center;
   width: 100%;
   max-width: 800px;
-  padding: 30px;
-  margin-top: 87px;
-  margin-bottom: 30px;
+  max-height: 740px;
+  padding: 50px;
+  margin: 87px 30px 30px;
   background-color: ${({ theme }) => theme.color.gray.dark};
   border-radius: ${({ theme }) => theme.radius.large};
   box-shadow: ${({ theme }) => theme.shadow["box-shadow"]};
+  
+  ${({theme}) => theme.media.md} {
+    padding: 122px 144px;
+  }
 
   img {
-    width: 80%;
-    max-width: 534px;
+    display: block;
+    width: 100%;
     border-radius: ${({ theme }) => theme.radius.medium};
-    translate: 30px;
 
     ${({theme}) => theme.media.md} {
-      width: 60%;
+      max-width: 534px;
+      max-height: 383px;
     }
   }
 `;
@@ -48,9 +53,14 @@ const Name = styled.div`
 `;
 
 const Icons = styled.div `
-  display: flex;
+  display: none;
   justify-content: flex-end;
   column-gap: 1.444rem;
+  
+  ${({theme}) => theme.media.md} {
+    display: flex;
+    align-items: center;
+  }
 `
 
 const Properties = styled.div`

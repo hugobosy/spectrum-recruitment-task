@@ -30,7 +30,7 @@ export const Home = () => {
 
   return (
     <Wrapper>
-      <Container>
+      <Container page="home">
         <S.Header>
           <Paragraph
             weight={400}

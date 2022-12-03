@@ -29,12 +29,12 @@ const aligns = {
 
 const Button = styled.button<Partial<ButtonTypes>>`
   padding: 1rem 3.1rem;
-  width: 236px;
+  max-width: 236px;
   border: none;
   ${({align}) => align && aligns[align]};
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: ${({ theme }) => theme.font.family.secondary};
-  font-size: ${({ theme }) => theme.font.size.xs};
+  font-size: ${({ theme }) => theme.font.size.xxs};
   color: ${({ theme }) => theme.color.light};
   border-radius: ${({theme}) => theme.radius.normal};
   line-height: ${({theme}) => theme.font.line.s};
