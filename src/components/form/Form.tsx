@@ -2,12 +2,12 @@ import React, { SyntheticEvent, useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 import { Button } from "../../ui/components/button/Button";
 import { Input } from "../../ui/components/input/Input";
-import { Errors, RegisterData } from "./Form.types";
+import { Errors, FormTypes, RegisterData } from "./Form.types";
 import { Paragraph } from "../../ui/components/paragraph/Paragraph";
 import { Checkbox } from "../../ui/components/checkbox/Checkbox";
 import S from "./Form.styles";
 
-export const Form = () => {
+export const Form: React.FC<FormTypes> = ({ tab }) => {
   const [registerData, setRegisterData] = useState<RegisterData>({
     id: uuid(),
     login: "",
@@ -28,26 +28,23 @@ export const Form = () => {
   });
 
   const handleSend = async () => {
-    await fetch("https://example.com/", {
-      method: "POST",
-      body: JSON.stringify(registerData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    try {
+      await fetch("https://example.com/", {
+        method: "POST",
+        body: JSON.stringify(registerData, tab),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    } catch (e) {
+      console.log("błąd serwerwa", e);
+    }
   };
 
-  const handleForm = async (e: SyntheticEvent) => {
+  const handleForm = (e: SyntheticEvent) => {
     e.preventDefault();
-    if (
-      errors.login &&
-      errors.password &&
-      errors.email &&
-      errors.phone &&
-      errors.checked
-    ) {
-      await handleSend();
-    }
+    handleSend();
+    alert(JSON.stringify({ registerData, tab }));
   };
 
   return (

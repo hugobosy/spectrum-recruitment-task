@@ -5,29 +5,37 @@ import { AcceptIcon } from "../../ui/components/accept-icon/AcceptIcon";
 import { UserIcon } from "../../ui/components/user-icon/UserIcon";
 import { Wrapper } from "../../ui/components/wrapper/Wrapper";
 import { Container } from "../../ui/components/container/Container";
-import S from "./Home.styles";
 import { NavLink } from "react-router-dom";
+import { Data, HomeTypes } from "./Home.types";
+import S from "./Home.styles";
 
-interface data {
-  name: string;
-  birth_year: string;
-  eye_color: string;
-}
-
-export const Home = () => {
-  const [data, setData] = useState<data[]>([]);
+export const Home: React.FC<HomeTypes> = ({ tab }) => {
+  const [data, setData] = useState<Data[]>([]);
   const [number, setNumber] = useState(1);
 
   useEffect(() => {
     fetch(`https://swapi.py4e.com/api/people/${number}/`)
       .then((res) => res.json())
-      .then((data) => setData([data]));
+      .then((data) => {
+        setData([data]);
+      });
   }, [number]);
 
   const nextData = () => {
     setNumber(number + 1);
   };
 
+  const updateTab = () => {
+    data.map((item) => {
+      tab.push({
+        name: item.name,
+        created: item.created,
+        vehicles: item.vehicles,
+      });
+    });
+  };
+
+  console.log(tab);
   return (
     <Wrapper>
       <Container page="home">
@@ -74,7 +82,14 @@ export const Home = () => {
             </S.Properties>
           </S.Content>
         ))}
-        <Button text="next profiles" bgColor="green" handleClick={nextData} />
+        <Button
+          text="next profiles"
+          bgColor="green"
+          handleClick={() => {
+            nextData();
+            updateTab();
+          }}
+        />
       </Container>
     </Wrapper>
   );

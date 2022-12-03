@@ -14,3 +14,7 @@ export interface Errors {
   phone: string | boolean;
   checked: string | boolean;
 }
+
+export interface FormTypes  {
+  tab: any[];
+}
