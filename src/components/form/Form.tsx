@@ -38,7 +38,7 @@ export const Form = () => {
   };
 
   const handleForm = async (e: SyntheticEvent) => {
-    // e.preventDefault();
+    e.preventDefault();
     if (
       errors.login &&
       errors.password &&
@@ -47,9 +47,7 @@ export const Form = () => {
       errors.checked
     ) {
       await handleSend();
-
     }
-    console.log(registerData);
   };
 
   return (

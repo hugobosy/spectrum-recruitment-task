@@ -3,7 +3,9 @@ import styled from "styled-components";
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  margin: 100px;
+  width: 100%;
+  padding: 0 20px;
 
   ${({theme}) => theme.media.md} {
     padding: 0px 174px;
