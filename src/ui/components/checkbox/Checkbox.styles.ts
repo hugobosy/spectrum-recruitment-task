@@ -57,6 +57,8 @@ const Wrapper = styled.div`
     position: absolute;
     display: block;
     color: ${({theme}) => theme.color.danger};
+    font-family: ${({theme}) => theme.font.family.primary};
+    font-size: ${({theme}) => theme.font.size.xs};
   }
 `;
 
