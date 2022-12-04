@@ -36,6 +36,10 @@ const Content = styled.div`
     ${({theme}) => theme.media.md} {
       translate: 10%;
     }
+    
+    ${({theme}) => theme.media.lg} {
+      translate: 0;
+    }
   }
 `;
 
