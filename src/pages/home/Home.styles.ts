@@ -16,7 +16,7 @@ const Content = styled.div`
   max-width: 800px;
   max-height: 740px;
   padding: 50px;
-  margin: 87px 30px 30px;
+  margin: 87px 0 30px;
   background-color: ${({ theme }) => theme.color.gray.dark};
   border-radius: ${({ theme }) => theme.radius.large};
   box-shadow: ${({ theme }) => theme.shadow["box-shadow"]};
@@ -28,11 +28,13 @@ const Content = styled.div`
   img {
     display: block;
     width: 100%;
+    max-width: 534px;
+    max-height: 383px;
     border-radius: ${({ theme }) => theme.radius.medium};
+    translate: 10% 0;
 
     ${({theme}) => theme.media.md} {
-      max-width: 534px;
-      max-height: 383px;
+      translate: 10%;
     }
   }
 `;
@@ -47,7 +49,7 @@ const Name = styled.div`
   width: 100%;
   max-width: 534px;
   
-  ${({theme}) => theme.media.md} {
+  ${({theme}) => theme.media.sm} {
     flex-direction: row;
   }
 `;
@@ -57,14 +59,14 @@ const Icons = styled.div `
   justify-content: flex-end;
   column-gap: 1.444rem;
   
-  ${({theme}) => theme.media.md} {
+  ${({theme}) => theme.media.sm} {
     display: flex;
     align-items: center;
   }
 `
 
 const Properties = styled.div`
-  width: 333px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 0 50px;
 `;
 export default { Header, Content, Name, Properties, Icons };

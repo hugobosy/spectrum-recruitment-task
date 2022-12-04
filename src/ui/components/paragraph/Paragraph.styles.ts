@@ -15,7 +15,7 @@ const sizes = {
   small: css`
     font-size: ${({ theme }) => theme.font.size.xs};
 
-    ${({ theme }) => theme.media.md} {
+    ${({ theme }) => theme.media.sm} {
       font-size: ${({ theme }) => theme.font.size.s};
     }
   `,
@@ -31,7 +31,7 @@ const sizes = {
   large: css`
     font-size: ${({ theme }) => theme.font.size.s};
 
-    ${({ theme }) => theme.media.md} {
+    ${({ theme }) => theme.media.sm} {
       font-size: ${({ theme }) => theme.font.size.l};
     }
   `,
@@ -64,7 +64,6 @@ const aligns = {
 };
 
 const Paragraph = styled.p<Partial<ParagraphTypes>>`
-  position: relative;
   ${({ font }) => font && fonts[font]};
   ${({ size }) => size && sizes[size]};
   ${({ weight }) => weight && weights[weight]};
@@ -87,6 +86,7 @@ const Paragraph = styled.p<Partial<ParagraphTypes>>`
   ${({ isUnderline }) =>
     isUnderline &&
     css`
+      position: relative;
       &::after {
         content: "";
         position: absolute;

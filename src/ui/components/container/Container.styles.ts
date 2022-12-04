@@ -17,9 +17,10 @@ const Container = styled.div<Partial<ContainerTypes>>`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   width: 100%;
   max-width: 1130px;
-  min-height: 100vh;
+  min-height: 1200px;
   background-color: ${({ theme }) => theme.color.light};
   ${({ page }) => page && pages[page]};
 `;
